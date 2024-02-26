@@ -1,4 +1,4 @@
-package br.com.fiap.mp;
+package br.com.syncfy;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package br.com.fiap.mp.model;
+package br.com.syncfy.model;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

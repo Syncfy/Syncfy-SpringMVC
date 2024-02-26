@@ -1,4 +1,4 @@
-package br.com.fiap.mp.controller;
+package br.com.syncfy.controller;
 
 import java.util.Arrays;
 import java.util.List;
@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import br.com.fiap.mp.model.Pedido;
+import br.com.syncfy.model.Pedido;
 
 @Controller
 @RequestMapping("/home")
