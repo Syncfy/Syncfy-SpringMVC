@@ -1,128 +1,135 @@
-#navlist {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 50px;
-  background-color: #00d900;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 0 20px; /* Adiciona um pouco de espaço nas laterais */
+/* Reset básico para remover as margens e padding padrões */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Estilo para o cabeçalho */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff; /* Cor de fundo do cabeçalho agora é branca */
+  top: 0;
+  width: 100%;
+  padding: 0 20px; /* Espaço nas laterais do cabeçalho */
+  height: 70px; /* Altura do cabeçalho */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve para destacar o cabeçalho */
+}
+
+/* Estilo para a logo */
 .logo img {
-  height: 40px; /* Ajuste conforme necessário */
+  height: 50px; /* Altura da logo */
+  width: auto; /* Largura automática para manter a proporção */
+}
+
+/* Estilo para a barra de pesquisa */
+.search form {
+  display: flex;
+  flex-grow: 1; /* Permite que a barra de pesquisa ocupe todo o espaço disponível */
+  margin: 0 20px; /* Margem na esquerda e na direita */
 }
 
 .search input[type="text"] {
-  width: 500px; /* Ajuste conforme necessário */
-  height: 35px;
-  border-radius: 25px;
+  flex-grow: 1; /* Faz o input ocupar o espaço disponível */
+  height: 40px;
+  border: 2px solid #cccccc; /* Borda com cor mais suave */
+  padding: 0 15px; /* Espaçamento interno à esquerda */
+  font-size: 16px; /* Tamanho da fonte */
+  border-radius: 20px 0 0 20px; /* Borda arredondada à esquerda */
+}
+
+.search button {
+  background-color: #0056b3; /* Cor de fundo do botão */
   border: none;
-  padding-left: 10px; /* Para não colar o texto no início do campo */
-}
-
-.cart span {
-  cursor: pointer;
-  /* Estilize conforme necessário */
-}
-
-.search {
-  margin: 0 auto;
-}
-.text {
-  font-size: 20px;
-  margin-left: 10px;
-  margin-top: -770px;
-  color: black;
-  font-weight: 900;
-}
-
-.green-background {
-  width: 1200px;
-  height: 210px;
-  margin-left: 70px;
-  margin-top: 70px;
-  border-radius: 25px;
-  background-color: #00d900;
-}
-.green-background h1 {
-  font-size: 80px;
-  color: black;
-  font-weight: extra-bold;
-  margin-left: -390px;
-  text-align: center;
-}
-.green-background h2 {
-  margin-left: -390px;
-  font-size: 30px;
-  color: white;
-  font-weight: 900;
-  text-align: center;
-}
-.dinheiro {
-  text-align: center;
-  margin-top: -600px;
-  width: 200px;
-  height: 200px;
-  margin-left: 800px;
-}
-.categoria {
-  font-size: large;
-  font-size: 30px;
-  margin-left: 70px;
-}
-.secao4 {
-  margin: 0;
-  font-family: Helvetica, sans-serif;
-}
-.secao4-div {
+  border-radius: 0 20px 20px 0; /* Borda arredondada à direita */
+  padding: 0 20px; /* Espaçamento interno */
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  padding: 10px;
-  text-align: center;
+  cursor: pointer; /* Cursor em forma de ponteiro */
+  transition: background-color 0.3s; /* Transição suave ao alterar a cor de fundo */
 }
-.secao4-div-card {
+
+.search button:hover {
+  background-color: #003d82; /* Cor de fundo do botão ao passar o mouse */
+}
+
+.search button img {
+  height: 24px; /* Altura fixa para a imagem do botão */
+  width: auto; /* Largura automática para manter proporções */
+}
+
+/* Estilo para o ícone do carrinho */
+.cart img {
+  height: 40px; /* Altura do ícone do carrinho */
+  width: auto; /* Largura automática para manter proporções */
+}
+
+/* CSS para a mensagem de boas-vindas */
+.text p {
+  font-size: 24px; /* Tamanho da fonte */
+  font-weight: bold; /* Peso da fonte */
+  color: #2a2a2a; /* Cor da fonte */
+  text-align: center; /* Centralizar o texto */
+  margin: 20px 0; /* Margem para separar do conteúdo acima e abaixo */
+  font-family: "Arial", sans-serif; /* Tipo de fonte */
+}
+
+/* CSS para o banner preencher toda a largura */
+.banner img {
+  width: 100%; /* Faz a imagem preencher toda a largura */
+  height: auto; /* Mantém a proporção da altura automaticamente */
+  display: block; /* Remove qualquer espaço extra ao redor da imagem */
+}
+
+/* Estilização da seção de categorias */
+.categoria {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 40px 0;
+  color: #333;
+}
+
+.secao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Espaçamento entre os cartões */
+  padding: 20px;
+}
+
+.secao-div {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Ajusta para ser mais responsivo */
+  gap: 20px; /* Espaçamento entre os cartões */
+  padding: 20px;
+}
+
+.secao-div-card {
+  background-color: #fff; /* Fundo branco para destacar os cartões */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+  border-radius: 10px; /* Bordas arredondadas */
+  overflow: hidden; /* Evita que o conteúdo ultrapasse as bordas arredondadas */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: calc(100% / 3 - 95px);
-  margin: 10px;
-  box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  background-color: rgb(255, 255, 255);
-  transition: all 0.5s ease;
-  border: 1px solid black;
+  align-items: center; /* Centraliza o conteúdo no cartão */
+  padding: 15px; /* Espaçamento interno */
 }
-.secao4-div-card:hover {
-  transform: scale(1.1);
-  z-index: 1;
+
+.secao-div-card img {
+  width: 100%; /* Ajusta a imagem para preencher a largura do cartão */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-bottom: 15px; /* Espaço entre a imagem e o texto abaixo */
 }
-.secao4-div-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-}
-.secao4-div-card b {
-  padding-top: 10px;
-  font-size: 18px;
-}
-.secao4-div-card p {
-  padding-top: 5px;
-  font-size: 12px;
-  opacity: 90%;
-}
-.secao4-div-card h3 {
-  margin-bottom: 0px;
-}
-.busc {
-  margin: 50px auto;
-  width: 200px;
-  height: 50px;
-  border-radius: 25px;
-  background-color: #00d900;
+
+.secao-div-card h3,
+.secao-div-card p {
   text-align: center;
-  display: block;
-  border: 1px solid black;
 }
